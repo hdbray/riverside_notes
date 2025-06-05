@@ -1,0 +1,46 @@
+    \begin{tikzpicture}[scale=8,thick]
+    \draw[-] (0,0)--(1,0); 
+    \def\s{.005}
+
+    \def\e{.05}
+    \draw[blue] (.25,-\e)--(.75,-\e);
+    \draw[fill,blue] (.5,-\e) circle (\s) node {};
+
+
+    \begin{scope}[red]
+      \draw[] (.555555,-2*\e)--(.77777,-2*\e);
+      \draw[] (.33333-.111111,-2*\e)--(.333333+.111111,-2*\e);
+      \draw[fill] (.6666667,-2*\e) circle (\s) node {};
+    \end{scope}
+
+    \begin{scope}[green]
+    \draw[] (.6875,-3*\e)--(.8125,-3*\e);
+    \draw[fill] (.75,-3*\e) circle (\s) node {};
+
+    \draw[] (.25-0.0625,-3*\e)--(.25+0.0625,-3*\e);
+    \end{scope}
+
+
+    \begin{scope}[yellow]
+      
+    \draw[] (.76,-4*\e)--(.84,-4*\e);
+    \draw[fill] (.8,-4*\e) circle (\s) node {};
+
+    \draw[] (.2-.04,-4*\e)--(.2+.04,-4*\e);
+    \draw[] (.4-.04,-4*\e)--(.4+.04,-4*\e);
+    \draw[] (.6-.04,-4*\e)--(.6+.04,-4*\e);
+
+    \end{scope}
+
+    \draw[fill] (0,0) circle (\s) node[above] {$0$};
+    \draw[fill] (1,0) circle (\s) node[above] {$1$};
+    \draw[fill] (.25,0) circle (\s) node[above] {$\frac14$};
+    \draw[fill] (.33333,0) circle (\s) node[above] {$\frac13$};
+    \draw[fill] (.5,0) circle (\s) node[above] {$\frac12$};
+    \draw[fill] (.666667,0) circle (\s) node[above] {$\frac23$};
+    \draw[fill] (.75,0) circle (\s) node[above] {$\frac34$};
+    \draw[fill] (.8,0) circle (\s) node[above] {$\frac45$};
+
+
+    \draw[dashed,thin] (.42,.5*\e) node[above] {$x$} -- (.42,-4.5*\e);
+  \end{tikzpicture}

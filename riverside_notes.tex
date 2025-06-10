@@ -22,12 +22,15 @@
 \newtheorem{observation}[proposition]{Observation}
 \theoremstyle{remark}
 \newtheorem{remark}[proposition]{Remark}
+\newtheorem{fact}[proposition]{Fact}
 \newtheorem{conjecture}[proposition]{Conjecture}
 \newtheorem{question}[proposition]{Question}
 \newtheorem{problem}[proposition]{Problem}
 
 
 \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\cuspdepth}{CuspDepth}
 
 \DeclareMathOperator{\dist}{d}
 \DeclareMathOperator{\CAT}{\mathsf{CAT}}
@@ -55,7 +58,7 @@
 
 \begin{document}
 
-\title{
+\title[A 0-1 law for hyperbolic metric spaces]{
   A 0-1 law and cusp excursion for geometrically finite actions on coarsely
   hyperbolic metric spaces
 }
@@ -76,24 +79,28 @@
 
 \section{Introduction}
 
+\subsection{History}
+
 
 Given a function $\psi\colon\mathbb N\to \mathbb R+$, define
 \[ 
   \Theta(\psi)=\{x\in\mathbb [0,1] : |x-\frac{p}q|<\frac{\psi(q)}q
   \text{ for infinitely many reduced rationals }\frac{p}q \}
 \]
+Note that if $\psi\equiv 1$ then $\Theta(\psi)=[0,1]$. A century ago,
+Khinchin proved the following celebrated theorem: 
 
 \begin{theorem}[Khinchin, 1926]
   Let $\psi\colon \mathbb N\to\mathbb R^+$ be monotone decreasing.
   \comharry{is this even needed? any other hypotheses?}
   Then 
   \[
-    \sum_{q\in\mathbb R} \psi(q)=\infty \; \text{ then }\; \Theta(\psi)
+    \sum_{q\in\mathbb N} \psi(q)=\infty \; \text{ then }\; \Theta(\psi)
     \text{ has measure 1}
   \]
   and 
   \[
-    \sum_{q\in\mathbb R} \psi(q)=0 \; \text{ then }\; \Theta(\psi)
+    \sum_{q\in\mathbb N} \psi(q)=0 \; \text{ then }\; \Theta(\psi)
     \text{ has measure zero}.
   \]
   \label{thm:khinchin}
@@ -159,23 +166,276 @@ We will now discuss an analogy of Khinchin's Theorem (\ref{thm:khinchin})
 for the hyperbolic plane, due originally to Sullivan \cite{sullivan84}.
 
 
-\subsection{Horoball packings for the hyperbolic plane} 
+\subsection{Horoball packings at infinity for hyperbolic 2-space} 
 
 The results of Sullivan generalize but we present them for surfaces, or
 really for a particular surface, to communicate the concept. A statement
 in full generality appears \comharry{ref} and is the goal of these notes. 
 
-Recall a { \em  Fuchsian group} is a discrete subgroup $\Gamma$ of $\PSL(2,\mathbb
-R)$, which acts on the upper half-plane model of hyperbolic 2-space
-$\mathbb H^2$ by isometries via M\"obius transformations. Let
+Let $\mathbb D$ denote the disk model of hyperbolic 2-space. 
+Recall a { \em  Fuchsian group} is a discrete subgroup $\Gamma$ of 
+$\Isom(\mathbb D)$ acting by 
+%$\PSL(2,\mathbb
+%R)$, which acts on the upper half-plane model of hyperbolic 2-space
+%$\mathbb H^2$ by isometries via 
+M\"obius transformations. Let
 $\Sigma_{g,n}$ denote a surfaces of genus $g$ with $n$ punctures. Consider a
-representation $\Gamma<\PSL(2,\mathbb R)$ of $\pi_1(\Sigma_{0,1})$ which
-acts cofinitely on $\mathbb H^2$; that is, the quotient $\mathbb
-H^2/\Gamma$ has finite area. 
+representation 
+$\Gamma<\Isom(\mathbb D) $
+%$\Gamma<\PSL(2,\mathbb R) $
+of $\pi_1(\Sigma_{0,1})$ which
+acts cofinitely on $\mathbb D$; that is, the quotient $\mathbb
+D/\Gamma$ has finite area. In particular, let $\Gamma$ 
+be a representation for which 
+the ideal quadrilateral with vertices
+$1,-i,1,i\in\partial \mathbb D=S^1$ is a fundamental domain for the
+$\Gamma$-action. 
 
 
+We now introduce a concept of horoball packing at infinity. 
+We will say a {\em horoball centered at $p\in S^1$} is a horoball in
+$\mathbb D$ (which is a Euclidean ball in this model) tangent to $S^1$ at
+$p$. 
+Let $\mathcal P=\Gamma.\{\pm1,\pm i\}$. These {\em parabolic points} will be
+in analogy with radional points.
+For $p\in \{\pm 1,\pm i\},$ choose a collection of (sufficiently small)
+horoballs $H_p$ centered at $p$. Then for $gp\in\mathcal P$, let
+$H_{gp}=gH_p$. Thus we have a family $\{H_p\}_{p\in\mathcal P}$ of
+horoballs, with each $H_p$ centered at $p$. Let $r_p$ denote the
+Euclidean radius of $H_p$ in the disk model $\mathcal D$.
+Now, to allow for rescaling, we denote by $H_p(r)$ the horoball centered at
+$p$ of Euclidean radius $r$. Thus, $r_p$ is chosen so that
+$H_p=H_p(r_p)$. Finally, we define the {\em horoball shadow $\mathcal
+H_p(r)$ centered at $p$ with radius $r$} to be the set of a endpoints
+$\xi$ of
+geodesic rays $[0,\xi)$ such that $[0,\xi)$ intersects the horoball
+$H_p(r)$ in $\mathbb D$. See that $\mathcal H_p(r)$ is an
+interval in $S^1$ centered at $p$ with radius approximately $r$. 
+
+\subsection{0-1 law and cusp excursion in hyperbolic 2-space}
+Now, for $\phi\colon\mathbb R^+\to\mathbb R^+$ \comharry{increasing and?}
+we define the limsup set
+
+\[
+  \Theta(\phi)=\{x\in S^1 : x\in\mathcal H_p(r_p\phi(r_p)) \text{ for
+  infinitely many }p\in\mathcal P\}. 
+\]
+
+When $\phi\equiv 1$, $\Theta(1)$ is the shadows of all the horoballs from
+the original packing, without any rescaling. These horoballs all project to
+the same horoball neighborhood of the cusp in the punctured torus quotient. 
+It is a fact due to ergodicity
+of the geodesic flow of $\Sigma_{0,1}$ 
+that in this case, Lebesgue-almost every geodesic visits each
+horoball infinitely often. Hence, $\Theta(1)$ has Lebesgue measure 1. We 
+should think of $r_p$ as analogous to the standard radius $\frac1q$ of
+$\frac{p}q$ for the corresponding limsup set for the real line. 
+
+The following 0-1 for hyperbolic 2-space is due to Sullivan:
+
+\begin{theorem}[Khinchin]
+  For sufficiently small $\lambda\in (0,1)$, 
+  Then 
+  \[
+    \sum_{n\in\mathbb N} \phi(q)=\infty \; \text{ then }\; \Theta(\phi)
+    \text{ has Lebesgue measure 1}
+  \]
+  and 
+  \[
+    \sum_{n\in\mathbb N} \phi(q)=0 \; \text{ then }\; \Theta(\phi)
+    \text{ has Lebesgue measure zero}.
+  \]
+  \label{thm:khinchin_type}
+\end{theorem}
+
+This theorem provides an application to cusp excursion called the {\em logarithm
+law}. First, define the {\em non-cuspidal} part of $\mathbb D$ to be 
+\[
+  NC=\mathbb D \smallsetminus \cup_{p\in\mathcal P} H_p.
+\]
+
+Then for a point $x\in \mathbb D$, define the $\cuspdepth(x)$
+to be 0 if $x\in NC$, and 
+\[
+  \cuspdepth(x)=d(x,\partial H_p) \; \text{ where } x\in H_p.
+\]
+Given a point $\xi\in S^1$, denote by $\xi_t$ the point on the geodesic ray
+$[0,\xi)$ which is distance $t$ from $0$. 
+
+\begin{theorem}
+  For Lebesgue almost every $\xi\in S^1$, 
+  \[
+    \limsup_{t\to+\infty} \frac{\cuspdepth(\xi_t)}{\log t}=1.
+  \]
+  \label{thm:loglaw}
+\end{theorem}
 
 
+\subsection{Overview of the notes}
+
+With Tiozzo, we generalize Theorems~\ref{thm:khinchin_type} and
+\ref{thm:loglaw} to the setting of certain geometrically finite actions on
+coarsely hyperbolic metric spaces.  In these notes, I present the proof
+strategy for these results at that level of generality. I introduce the
+setting with fundamental intuition and examples. Along the way I review
+some of the foundational Patterson--Sullivan theory needed for these
+results. 
+
+\section{Hyperbolic metric spaces}
+
+For a more complete treatment of hyperbolic metric spaces,
+\comharry{add refs} 
+
+First for any set $U$ and functions $f,g\colon U\to \mathbb R$, we write 
+\begin{itemize}
+  \item $f\approx g$ if there exists a constant $C$ such that $f-C\leq g\leq
+    f+C$ on $U$, and 
+  \item $f\asymp g$ if there exists a constant $K$ such that $\frac1Kf\leq
+    g\leq Kf$. 
+\end{itemize}
+
+Recall that a metric space $(X,d)$ is {\em (Gromov) hyperbolic} or {\em
+$\delta$-hyperbolic} if there exists a $\delta>0$ such that all geodesic
+triangles in $X$ are $\delta$-thin: more specifically, for any geodesic
+triangle $\Delta$ with vertices $x,y,z\in X$,
+any edge $[x,y]$ of $\Delta$ is contained in the
+$\delta$-neighborhood of the two other edges $[y,z]\cup [x,z]$ 
+of $\Delta$. For example,
+trees are 0-hyperbolic, and $\mathbb H^2$ is $\log 2$-hyperbolic. One
+should think of a hyperbolic metric space as coarsely a tree. 
+
+As an alternate definition, $(X,d)$ is Gromov-hyperbolic if and only if
+for every geodesic triangle $\Delta$ with vertices $x,y,z\in
+X$, there exist three points
+$a\in[x,y],b\in[y,z]$, and $c\in[x,z]$ such that $\diam(\{a,b,c\})\leq
+\delta$. A geodesic triangle with vertices $a,b,c$ is said to be an
+{\em inner triangle} of $\Delta$. Note that for a tree, we have $a=b=c$. 
+
+Given a triple $x,y,z\in X$, {\em the Gromov product} is 
+\[
+  \langle x,y\rangle_z=\frac12(d(x,z)+d(y,z)-d(x,z)).
+\]
+
+Notice that for a tree, $\langle x,y\rangle_z=d(z,[x,y])$. More
+generally, 
+the Gromov product measures the defect from colinearity of the triple
+$x,y,z$, up to additive error:  
+
+
+\begin{fact}
+  For a $\delta$-hyperbolic metric space $(X,d)$, 
+  \[
+    \langle x,y\rangle_z\approx d(z,[x,y])
+  \]
+  with constants depending only on $\delta$. 
+\end{fact}
+
+
+Fixing a perspective point $o\in X$, the {\em visual boundary} of
+$X$ is denoted by $\partial X$, and is the set of geodesic rays based at
+$o$ up to bounded equivalence. Define the {\em shadow} $\mathcal
+O_r(x,y)$ of $y\in X$ of
+radius $r$ by 
+\[
+  \mathcal O_r(x,y)=\{\xi\in\partial X\mid [x,\xi)\cap B_r(y)\neq \varnothing
+    \text{ for some geodesic representation }[x,\xi)\text{ of }\xi
+\}.
+\]
+
+The notation $\mathcal O$ stands for ombre, which is French for shadow. 
+The visual boundary is a compactification of
+$X$ when endowed with the shadow topology. Let $\bar{X}=X\cup\partial X$. 
+
+\subsection{Busemann functions and horoballs}
+
+The notion of horoball in a hyperbolic metric space is defined using
+Busemann functions. This generalizes the setting of hyperbolic space and
+shares many essential properties.
+
+For $x,y,z\in X$, define the {\em Busemann function} centered at $z$ by 
+\[
+  \beta_z(x,y)=d(x,z)-d(y,z).
+\]
+This expression measures the signed distance between spheres centered at
+$z$ passing through $x$ and $y$. 
+Let $\xi\in \partial X$. Then 
+\[
+  \beta_\xi(x,y)=\liminf_{z\to\xi} \beta_z(x,y). 
+\]
+
+In hyperbolic space, $\beta_\xi$ is in fact a limit. In general it is not.
+For example, one could take the infinite graph given by a ladder with
+infinitely many rungs and the standard path metric. This space is 
+hyperbolic (it is quasi-isometric to a tree), but the Busemann function is
+not a limit. It is nonetheless well-defined up to choice of path:
+
+\begin{fact}
+  In a $\delta$-hyperbolic metric space, for any two sequences
+  $z_,w_n\to\xi\in\partial X$, 
+  \[
+    \beta_{z_n}(x,y)\approx\beta_{w_n}(x,y)
+  \]
+  with constants depending only on $\delta$. 
+\end{fact}
+
+Some straightforward but useful 
+properties of Busemann functions include:
+
+For all $x,y,w\in X$, $z\in \bar{X}$, 
+\begin{enumerate}
+  \item ($\Gamma$-invariant) $\beta_{\gamma z}(x,y)=\beta_z(x,y)$ for all
+  \item (asymmetric) $\beta_z (x,y) \approx -\beta_z(y,x)$. 
+  \item (1-Lipshitz) $|\beta_z(x,y)|\leq d(x,y)$. 
+  \item (cocycle property) $\beta_z(x,y)\approx
+    \beta_z(x,w)+\beta_z(w,y)$.
+\end{enumerate}
+
+Notice that the $1$-Lipshitz property implies finiteness of $\beta_\xi$ for
+$\xi\in\partial X$. 
+
+
+\begin{definition}
+  Fixing $o\in X$, the {\em horoball of radius $r$ centered at $\xi$} is 
+  \[
+    H_\xi(r)=\{x\in X\mid \beta_\xi(x,o)\leq \log r\}. 
+  \]
+  A {\em horosphere of radius $r$ centered at $\xi$} 
+  $\{x\in X\mid \beta_\xi(x,o)=\log r\}. $
+  \label{def:horoball}
+\end{definition}
+
+
+We think of horospheres
+as a limit of metric spheres $S_n$
+which contain a fixed point $x$, with each sphere $S_n$
+centered at 
+$z_n$ which are 
+going to $\partial X$ with $n$.
+It is straightforward to verify that in 
+$\mathbb R^2$, horospheres are lines, and horoballs are 
+halfspaces. In $\mathbb D$, horospheres are Euclidean circles tangent to
+the boundary $S^1$, and horoballs are the disks contained in these circles.
+In the upper-half space model $\mathbb H^2$ 
+of hyperbolic 2-space, horospheres centered
+at the vertical point at infinity are horizontal lines, and all other
+horospheres are Euclidean circles tangent to the real line. In particular,
+a straightforward exercise is to confirm that by for $o=i$ and  $\xi=0$, we
+have $H_\xi(r)=\frac{r}2$ in $\mathbb H^2$. This motivates the choice of
+$\log r$ in the definition of the horoball.
+
+
+\begin{definition}
+  The {\em shadow of a horoball of radius }$r$ centered at $\xi$ is 
+  \[
+    \mathcal H_\xi(r):=\{\eta\in\partial X\mid [o,\eta)\cap H_\xi(r)\neq \varnothing
+    \text{ for some geodesic representative of }\eta\}.
+  \]
+  \label{def:horoball_shadows}
+\end{definition}
+
+\subsection{Geometrical finiteness}
+
+\comharry{resume at page 8} of notes
 
 
 

@@ -18,6 +18,7 @@
 \newtheorem{corollary}[proposition]{Corollary}
 \theoremstyle{definition}
 \newtheorem{example}[proposition]{Example}
+\newtheorem{exercise}[proposition]{Exercise}
 \newtheorem{definition}[proposition]{Definition}
 \newtheorem{observation}[proposition]{Observation}
 \theoremstyle{remark}
@@ -29,6 +30,7 @@
 
 
 \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\stab}{stab}
 \DeclareMathOperator{\diam}{diam}
 \DeclareMathOperator{\cuspdepth}{CuspDepth}
 
@@ -419,8 +421,9 @@ In the upper-half space model $\mathbb H^2$
 of hyperbolic 2-space, horospheres centered
 at the vertical point at infinity are horizontal lines, and all other
 horospheres are Euclidean circles tangent to the real line. In particular,
-a straightforward exercise is to confirm that by for $o=i$ and  $\xi=0$, we
-have $H_\xi(r)=\frac{r}2$ in $\mathbb H^2$. This motivates the choice of
+a straightforward exercise is to confirm in $\mathbb H^2$ that for $o=i$ and  $\xi=0$, we
+have $H_\xi(2r)$ is a Euclidean ball of radius $r$ about $ir$. 
+This motivates the choice of
 $\log r$ in the definition of the horoball.
 
 
@@ -435,8 +438,203 @@ $\log r$ in the definition of the horoball.
 
 \subsection{Geometrical finiteness}
 
-\comharry{resume at page 8} of notes
 
+Fix a group $\Gamma$ of isometries of a hyperbolic metric space $(X,d)$
+acting properly discontinuously. 
+Assume $(X,d)$ is proper. 
+The {\em limit set} of $\Gamma$ is the set of accumulation points of
+a $\Gamma$-orbit:
+\[
+  \overline{\Gamma.o}/\Gamma.o 
+\]
+for any fixed $o\in X$. 
+By proper discontinuity, $\Lambda_\Gamma\subset\partial X$.
+Since $X$ is hyperbolic, $\Lambda_\Gamma$ does not
+depend on the basepoint \comharry{Coornaert Th\'eor\`eme 5.1}. 
+The group $\Gamma$ is {\em non-elementary} if $|\Lambda_\Gamma|\geq 3$.
+Equivalently, $\Gamma$ does not fix any point. \comharry{add refs}
+It follows that $\Lambda_\Gamma$ is uncountable. 
+When $\Gamma$ is non-elementary, $\Lambda_\Gamma$ is the
+smallest closed $\Gamma$-invariant subset of $\partial X$. 
+Let $C_\Gamma$ denote the {\em convex hull} of $\Lambda_\Gamma$; this is
+the intersection with $X$ of the smallest convex set in $\bar{X}$
+containing $\Lambda_\Gamma$. 
+
+Isometries of $X$ are classified by their translation distance. The
+{\em translation distance} of $\gamma\in\Isom(X)$ is
+$\tau(\gamma)=\inf_{o\in X}d(o,\gamma o)$. Then $\gamma$ is {\em elliptic}
+if $\tau(\gamma)=0$ is realized in $X$, {\em parabolic} if $\tau(\gamma)=0$
+is not realized, and {\em hyperbolic} or {\em loxodromic}
+if $\tau(\gamma)>0$, which implies in this setting that it is realized in
+$X$. If $\gamma$ is parabolic then it is infinite order with a single fixed
+point in $\partial X$, and if $\gamma$ is loxodromic then $\gamma$ is
+infinite order with each two fixed points in $\partial X$, one attracting
+and one repelling. \comharry{Bowditch Lemma 2.1}
+A subgroup $\Pi$ of $\Isom(X)$ is a {\em parabolic group} if  $\Pi$ has
+infinite order, fixes a single point in $\partial X$, and contains no
+loxodromic elements.
+
+
+A point $x\in\Lambda_\Gamma$ is {\em conical} if for any geodesic ray
+$\xi$ in the class of $x$, there exists a constant $D$ and a sequence
+$x_n\in\Gamma.o$ converging to $x$ such that $\{x_n\}_{n\in\mathbb
+N}$ is contained in a $D$ neighborhood of $\xi$. Equivalently, $x$ is
+conical in the sense of a convergence group action; in particular, there
+exists a sequence $\gamma_n\in\Gamma$ and $a\neq b\in\Lambda_\Gamma$ such
+that $\gamma_n x\to a$ and $\gamma_n y\to b$ for all
+$y\in\Lambda_\Gamma\smallsetminus\{x\}$.   
+
+\begin{exercise}
+  \begin{enumerate}
+    \item 
+      If $\gamma\in\Isom(\mathbb H^2)$ is
+      loxodromic, then the attracting and repelling fixed points of $\gamma$ are
+      conical limit points for any subgroup of isometries containing $\gamma$. 
+    \item 
+      Verify that every fixed point of a parabolic
+      isometry is in $\Lambda_\Gamma$. 
+    \item Assume $g$ is loxodromic, $h$ is parabolic and
+      $g,h\in\Gamma$. If 
+      $\Gamma$ is properly discontinuous then 
+      $g$ and $h$ cannot fix a common point in $\Lambda_\Gamma$. 
+  \end{enumerate}
+
+\end{exercise}
+Then a point $x\in\Lambda_\Gamma$ is {\em parabolic} if its stabilizer
+$\stab_\Gamma(x)$ is a parabolic subgroup, and is moreover {\em bounded
+parabolic} if $\Gamma$ acts on $\Lambda_\Gamma\smallsetminus\{x\}$
+cocompactly. 
+
+\begin{example}
+A first example for a parabolic subgroup is $\langle z\mapsto z+1\rangle$
+acting on the upper-half plane, which fixes $\infty$. Every
+parabolic isometry in this model is conjugate to a horizontal translation,
+which is upper triangular as a matrix. 
+Every loxodromic isometry is conjugate to a scaling $z\mapsto \lambda
+z$ for some $\lambda>0$, which is diagonal as a matrix. 
+
+In $\mathbb H^3$, \comharry{discuss a $\mathbb Z^2$ subgroup}. Remark that
+parabolic subgroups in $\mathbb H^n$ are virtually abelian with rank
+$\leq n-1$. 
+\end{example}
+
+
+Then $\Gamma$ is {\em geometrically finite} if every point of
+$\Lambda_\Gamma$ is either conical or bounded parabolic, and $\Gamma$ is
+more specifically {\em convex cocompact} if every point in $\Lambda_\Gamma$
+is conical. 
+Classically, for Kleinian groups $\Gamma<\mathbb H^3$, Beardon--Maskit
+proved that $\Gamma$ is geometrically finite if and only if $\Gamma$ admits
+a polygonal fundamental domain with finitely many sides. For higher
+dimensions this is false, but the framework of geometrical finiteness is
+fairly robust.  
+
+We discuss some examples below, but first here are some crucial facts that
+will be enlightened via examples. 
+
+\begin{fact}[Tukia, Yaman, Bowditch]
+  {\color{red}
+    finitely many cusps
+
+    horoball packing 
+
+    cocompact action on noncuspidal part
+  }
+\end{fact}
+
+
+Here are some examples.
+First, every finite covolume action on $\mathbb H^n$ is geometrically
+finite. 
+A good example to have in mind is the punctured torus, with genus 1
+and 1 puncture, denoted $\Sigma_{1,1}$. This surface 
+admits a hyperbolic metric of
+finite area by choosing opposite edge identifications for an ideal
+quadtrilateral, for instance as
+pictured in
+\comharry{figure}. The corresponding representation of $\pi_1(S)$ is
+computable; the generators are loxodromic with axes intersecting the
+identifying edges orthogonally.
+The one can verify that the commutators of this representation are parabolic,
+and in particular there is one commutator which is equal to a horizontal
+translation. 
+In $\mathbb H^2$, when $\Gamma$ has parabolics, 
+by definition this introduces a cuspidal region to the quotient, which
+lifts to a $\Gamma$-invariant collection of horoballs in $\mathbb H^2$,
+each preserved by a parabolic subgroup. 
+Since the property of being a parabolic fixed point is
+$\Gamma$-invariant,
+by computating the representation we confirm that 
+the rationals are parabolic, hence
+$\Lambda_\Gamma=\partial H^2=S^1$. Now it is straightfoward to verify that
+the parabolic points are bounded parabolic. The fact that all other points
+in $S^1$ are conical follows from \comharry{the fact}
+
+\begin{exercise}
+Verify that 
+when $\Gamma$ is cocompact, $\Lambda_\Gamma=\partial X$ and hence
+$C_\Gamma=X$. By the translation distance definition, $\Gamma$ has no
+parabolic isometries.  
+\end{exercise}
+
+It follows from the previous exercise 
+that cocompact actions are the first examples of convex
+cocompact actions, and that moreover 
+$\Gamma$ is convex cocompact if and only if the Cayley graph of $\Gamma$
+is quasi-isometrically embedded in $X$ via the orbit map
+$\gamma\mapsto\gamma.o$. 
+We can think of geometrical
+finiteness as a natural extension of convex cocompactness 
+where orbits do not quasi-isometrically
+embed  but the action retains some
+finiteness properties. 
+
+\begin{exercise}
+  Orbits of the parabolic subgroup $G=\langle z\mapsto z+1\rangle$  acting on
+  $\mathbb H^2$ grow logarithmically in $n$, and hence the orbit map does
+  not quasi-isometrically embed. 
+\end{exercise}
+
+\subsection{Growth conditions}
+
+To state the results, we will need to assume some growth conditions on the
+parabolic subgroups. 
+For a parabolic subgroup $\Pi<\Gamma$, define the growth function by 
+\[
+  B_\Pi(t)=\#\{g\in \Pi \mid d(o,go)\leq t\}.
+\]
+Then $\Pi$ has 
+{\em mixed exponential growth} if there exist $a_\Pi,\delta_\Pi$ such that 
+\[
+  B_\Pi(t)\asymp e^{\delta_\Pi t}(t+1)^{a_\Pi}. 
+\]
+
+\begin{exercise}
+  If $\Pi$ is a parabolic subgroup acting on $\mathbb H^2$ then
+  $\delta_\Pi=\frac12$ and $a_\Pi=0$. More generally, if $\Pi$ acts on
+  $\mathbb H^n$ then $\delta_\Pi=\frac{r}{n}$ where $r$ is the abelian rank
+  of $\Pi$.
+\end{exercise}
+
+
+
+\begin{example}
+[Groves--Manning cusp space]
+Here is a another example of a geometrically finite group action 
+which allows for many possible growth functions. 
+
+\end{example}
+
+
+Though our theorems are more general, we will present the notes under these
+growth assumptions for ease of readability, and refer the reader to
+\comharry{b-t} for details in greater generality. 
+
+
+
+
+
+\comharry{resume on page 8 with the facts of Tukia, Yaman, Bowditch}
 
 
 

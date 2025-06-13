@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.6)  9 JUN 2025 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.6)  13 JUN 2025 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -600,31 +600,31 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 (./riverside_notes.aux)
 \openout1 = `riverside_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -652,7 +652,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 61.
 
 (./riverside_notes.out) (./riverside_notes.out)
 \@outlinefile=\write4
@@ -666,10 +666,10 @@ Package hyperref Info: Link coloring OFF on input line 59.
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./figures/khinchin.tex)
 
-LaTeX Warning: Citation `sullivan84' on page 2 undefined on input line 166.
+LaTeX Warning: Citation `sullivan84' on page 2 undefined on input line 168.
 
 [2] [3]
-Overfull \hbox (40.25987pt too wide) detected at line 343
+Overfull \hbox (40.25987pt too wide) detected at line 345
 \OMS/cmsy/m/n/10.95 O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n
 /10.95 ) = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^X \OMS/cmsy/m/n/10.95 2 \
 OML/cmm/m/it/10.95 @X \OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/1
@@ -681,7 +681,7 @@ L/cmm/m/it/10.95 :
  []
 
 [4]
-Overfull \hbox (4.4927pt too wide) detected at line 432
+Overfull \hbox (4.4927pt too wide) detected at line 435
 \OMS/cmsy/m/n/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 r\OT1/cmr/m/n/10
 .95 ) := \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^Q \OMS/cmsy/m/n/10.95 2 \OM
 L/cmm/m/it/10.95 @X \OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.
@@ -691,9 +691,9 @@ L/cmm/m/it/10.95 @X \OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.
 0.95 g\OML/cmm/m/it/10.95 :
  []
 
-[5]
+[5] [6] [7]
 No file riverside_notes.bbl.
-[6] (./riverside_notes.aux)
+[8] (./riverside_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -703,13 +703,13 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `riverside_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 077666C7C97BF14D04B5A11E12268D99;1788.
+(rerunfilecheck)             Checksum: 307EFBFF9B4711789AD28413077C5DB2;1961.
  ) 
 Here is how much of TeX's memory you used:
- 20703 strings out of 474116
- 380355 string characters out of 5743682
+ 20726 strings out of 474116
+ 380637 string characters out of 5743682
  1945187 words of memory out of 5000000
- 42538 multiletter control sequences out of 15000+600000
+ 42548 multiletter control sequences out of 15000+600000
  568114 words of font info for 73 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  102i,9n,107p,604b,892s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -729,10 +729,10 @@ e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/202
 4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on riverside_notes.pdf (6 pages, 221498 bytes).
+Output written on riverside_notes.pdf (8 pages, 237408 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

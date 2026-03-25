@@ -81,7 +81,18 @@
 
 \section{Introduction}
 
+
 \subsection{History}
+
+{\color{red} more about connections to Diophantine approximation,
+Dirichlet's theorem?}
+
+{\color{red} should I frame this whole article to be about the penetration,
+  and then point out two other perspectives: the cusp depth and the
+  excursion? This lends itself well to making connections to the related
+  results of Paulin--Hersonsky, B.--Zimmer and soon Horton
+}
+
 
 
 Given a function $\psi\colon\mathbb N\to \mathbb R+$, define
@@ -284,6 +295,9 @@ some of the foundational Patterson--Sullivan theory needed for these
 results. 
 
 \section{Hyperbolic metric spaces}
+
+{\color{red} idea: write any proofs first for a tree, then for a metric
+space}
 
 For a more complete treatment of hyperbolic metric spaces,
 \comharry{add refs} 
@@ -595,7 +609,40 @@ finiteness properties.
   not quasi-isometrically embed. 
 \end{exercise}
 
+
+
+\subsection{The excursion wears many hats}
+
+Relationships between different excursion functions: 
+
+\begin{itemize}
+  \item Distance from orbit of the group $(\ast)$
+  \item Distance from basepoint $(\ast)$
+  \item Depth in horoball
+  \item Maximal depth in horoball
+  \item Total time in horoball $(\ast)$
+  \item Length of geodesic segment along the boundary $(\ast)$
+\end{itemize}
+
+
+For max depth iff total time, see handwritten note
+max\_depth\_vs\_total\_time.pdf
+
+This still requires proof that the limsup is realized along the maximal
+depth
+
+Also cite various places in the literature where these different notions are
+used. Note that distance from basepoint vs total time in horoball is only
+an appropriate notion in this noncompact case
+
+
+
+
+
 \subsection{Growth conditions}
+
+{\color{red} instead of $t^a$, assume $e^{\delta t}Q(t)$ where $Q$ is a
+positive polynomial}
 
 To state the results, we will need to assume some growth conditions on the
 parabolic subgroups. 
@@ -635,6 +682,169 @@ growth assumptions for ease of readability, and refer the reader to
 
 
 \comharry{resume on page 8 with the facts of Tukia, Yaman, Bowditch}
+
+
+\section{Khinchin theorem}
+
+Define $\phi\colon (0,1)\to(0,1)$ to be Khinchin if there exists
+a $b_1,b_2>0$ such that $\frac xy\leq b_1$ implies
+$\frac{\phi(x)}{\phi(y)}\leq b_2$. Note that it follows that for all
+$b_1>0$, there exists a $b_2>0$ such that $\frac xy\leq b_1$ implies 
+$\frac{\phi(x)}{\phi(y)}\leq b_2$. 
+Also,
+see that consequently
+$b_1^{-1}\leq \frac xy$ implies $b_2^{-1}\leq \frac{\phi(x)}{\phi(y)}$. 
+
+
+Define 
+\[
+  K^\phi =
+  \sum_{n\in\mathbb N} \phi(e^{-n})^{2(\delta_\Gamma-\delta_\Pi)}Q(-\log \phi
+  (e^{-n})).
+\]
+
+{\color{red} thanks to Andy Zimmer for making me aware of this proof. Add a
+reference to the resource he found}
+ 
+\begin{proof}[proof of full measure]
+  Assume $\phi$ is Khinchin and $K^\phi=\infty$. 
+  Then (exercise) we can construct a sequence $1<n_1<n_2<\ldots$ such that 
+  \[
+    \sum_{n=n_j}^{n_{j+1}-1} 
+    \phi(e^{-n})^{2(\delta_\Gamma-\delta_\Pi)}Q(-\log \phi
+    (e^{-n})) > \frac1{\sqrt{j}}.
+  \]
+  Define $\psi$ by 
+  \[
+    \psi(t)=j^{\frac1{2(\delta_\Gamma-\delta_\Pi)}} \textrm{ for
+    }t\in[e^{-n_{j+1}},e^{-n_j}).
+  \]
+  See that $\lim_{t\to0}\psi(t)=0$.
+
+  {\bf Exercise}: The product of two Khinchin functions is Khinchin.
+
+  {\bf Exercise}: $\psi$ is Khinchin. 
+
+  Thus, the product $\phi\psi$ is Khinchin.
+
+  Since $Q$ is a positive polynomial, there exists a $\lambda>0$ such that
+  for all $x>0, y>0$, $\frac{Q(x+y)}{Q(x)}>\lambda$ (to see this, fix a
+  $y$ and compute a limit as $x\to\infty$, noting that the highest degree
+  coefficient must be positive since $Q$ is positive and it dominates the
+  lower degree terms for $x$ large. 
+  Note that $x$ close to zero is not concerning as $Q$ is assumed positive
+  on $[0,\infty)$)
+%  a polynomial,
+%  hence continuous 
+%on all of $\mathbb R$). 
+  Thus in particular, 
+  \[
+    \frac{Q(-\log(\phi\psi)(e^{-n}))}{Q(-\log\phi(e^{-n}))}>\lambda.
+  \]
+  Then 
+  \begin{align*}
+    & \sum_{n=n_j}^{n_{j+1}-1} 
+    (\phi\psi)(e^{-n})^{2(\delta_\Gamma-\delta_\Pi)}Q(-\log (\phi\psi)
+    (e^{-n})) \\
+    & \geq 
+    j \sum_{n=n_j}^{n_{j+1}-1} 
+    (\phi)(e^{-n})^{2(\delta_\Gamma-\delta_\Pi)}Q(-\log (\phi\psi)
+    (e^{-n})) \\
+    & \geq 
+    \lambda j \sum_{n=n_j}^{n_{j+1}-1} 
+    (\phi)(e^{-n})^{2(\delta_\Gamma-\delta_\Pi)}Q(-\log (\phi)
+    (e^{-n})) 
+    >\lambda \sqrt j
+  \end{align*}
+  which implies $K^{\phi\psi}=\infty$ and 
+  by the converse of the
+  Borel-Cantelli Lemma, 
+  $\Theta^{\phi\psi}$ has positive measure.
+
+
+  Now we prove that $\Gamma \Theta^{\phi\psi}\subset \Theta^\phi$. Assume
+  $\eta\in\Theta^{\phi\psi}$. Then for $\gamma\in\Gamma$, there exists
+  $m_j\to\infty$, $p_j\in\mathcal P_{m_j}$ so that 
+  \[
+    \eta\in(\phi\psi)\mathcal H_p(r_p). 
+  \]
+  Now we make an observation. 
+%  {\color{red} turn this into a lemma.}
+  Let $r>0,p\in\mathcal P$. Recall that $e^{-d(o,H_p(r))}\asymp r$ with
+  constants depending on $\alpha$.  Then by the
+  triangle inequality there is
+  a constant $C_0(\alpha,\gamma)$ so that 
+  \[
+    \frac1{C_0}r\leq e^{-d(o,\gamma H_p(r))}\leq C_0r
+  \]
+  hence denoting the radius $r'$ of $\gamma H_p(r)=H_{\gamma p}(r')$, we
+  have $\frac1{C_0} r \leq r' \leq C_0 r $. 
+%  Let $x$ be an intersection point of a geodesic $(o,p)$ with 
+%  the boundary of the horosphere $H_p(r)$. Recall that
+%  $e^{-d(o,x)}\asymp r$ with constants depending on $\alpha$. 
+%  \[
+%    \frac1{C_0}r\leq e^{-d(o,\gamma x)}\leq C_0 r.
+%  \]
+%  See that $\gamma x$ is a point on a geodesic ray $(\gamma o,\gamma \eta)$. 
+%  Since any geodesic triangle $\Delta(o,\gamma o,\gamma\eta)$ is
+%  $\alpha$-thin, the point $x'\in(o,\gamma\eta)\cap \partial (\gamma
+%  H_{p}(r))$ is comparable to $\gamma x$ and thus within bounded distance
+%  depending only on $\alpha$. 
+%  {\color{red} this could use more explanation.}
+%  Thus, we have a $C_0'$ such that 
+%  \[
+%    \frac1{C_0'}r\leq e^{-d(o,x')}\leq C_0' r.
+%  \]
+%  Letting $r'$ denote the radius of $\gamma H_p(r)=H_{\gamma p}(r')$, we
+%  conclude
+%  \[
+%    \frac1{C_0''}r\leq r' \leq C_0'' r. 
+%  \]
+  Applying this to the case $r=r_{p_j}$, we have a constant $C_1$
+  independent of $j$ such that
+  \begin{equation}
+  \frac1{C_0C_1}r_{p_j}\leq
+  r_{\gamma p_j}\leq C_0C_1 r_{p_j}
+    \label{eqn:compare_radii}
+  \end{equation}
+  because the horoball packing was
+  constructed to be quasi-$\Gamma$-invariant. 
+
+  We also apply the observation to $\eta$ to conclude 
+  \[
+    \gamma\eta\in H_{\gamma p_j}(C_0r_{p_j} (\phi\psi)(r_{p_j})).
+  \]
+  Since $r_{p_j}\leq C_0C_1 r_{\gamma p_j}$ and $\phi\psi$ is Khinchin,
+  there is another constant $C_1=C_2(\psi,\phi,C_0C_1)$ so that 
+  \[
+    \gamma\eta\in H_{\gamma p_j}(C_0^2C_1C_2 r_{\gamma p_j}
+    (\phi\psi)(r_{\gamma p_j})).
+  \]
+  Now, notice that $r_{p_j}\to 0$ and Equation~\eqref{eqn:compare_radii}
+  imply that $r_{\gamma p_j}\to 0$, thus $\psi(r_{\gamma p_j})\to 0$. Then
+  for $j$ sufficiently large, we have $\psi(r_{\gamma p_j})\leq
+  \frac1{C_0^2C_1C_2}$, and 
+  \[
+    \gamma \eta\in H_{\gamma p_j}(r_{\gamma p_j}\phi(r_{\gamma p_{j}}))
+  \]
+  as desired.
+
+  To complete the proof, see that $\Gamma \Theta^{\phi\psi}$ is a
+  $\Gamma$-invariant set with positive measure. By ergodicity, it has full
+  measure. Since $\Theta^\phi$ contains it, then $\Theta^\phi$ also has
+  full measure. 
+\end{proof}
+
+
+\section{Logarithm law}
+
+Prove this in two stages:
+\begin{enumerate}
+  \item First, prove that the limsup is realized along the subsequence of
+    times where you turn around
+  \item Then, prove that this subsequence of times behaves as desired
+  \item Maybe this is where you make a connection to first hitting time
+\end{enumerate}
 
 
 

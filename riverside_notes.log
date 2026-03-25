@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.6)  13 JUN 2025 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.6)  18 MAR 2026 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,13 +663,18 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \openout5 = `riverside_notes.toc'.
 
 
+Overfull \hbox (8.26384pt too wide) in paragraph at lines 87--89
+ \OT1/cmr/m/n/10.95 1.1.\OT1/cmr/bx/n/10.95 History.[][] \OT1/cmr/m/n/10.95 mor
+e about con-nec-tions to Dio-phan-tine ap-prox-i-ma-tion, Dirich-
+ []
+
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./figures/khinchin.tex)
 
-LaTeX Warning: Citation `sullivan84' on page 2 undefined on input line 168.
+LaTeX Warning: Citation `sullivan84' on page 2 undefined on input line 179.
 
-[2] [3]
-Overfull \hbox (40.25987pt too wide) detected at line 345
+[2] [3] [4]
+Overfull \hbox (40.25987pt too wide) detected at line 359
 \OMS/cmsy/m/n/10.95 O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n
 /10.95 ) = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^X \OMS/cmsy/m/n/10.95 2 \
 OML/cmm/m/it/10.95 @X \OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/1
@@ -680,8 +685,8 @@ T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95
 L/cmm/m/it/10.95 :
  []
 
-[4]
-Overfull \hbox (4.4927pt too wide) detected at line 435
+[5]
+Overfull \hbox (4.4927pt too wide) detected at line 449
 \OMS/cmsy/m/n/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 r\OT1/cmr/m/n/10
 .95 ) := \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^Q \OMS/cmsy/m/n/10.95 2 \OM
 L/cmm/m/it/10.95 @X \OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.
@@ -691,9 +696,15 @@ L/cmm/m/it/10.95 @X \OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.
 0.95 g\OML/cmm/m/it/10.95 :
  []
 
-[5] [6] [7]
+[6] [7]
+Overfull \hbox (23.61316pt too wide) in paragraph at lines 627--629
+[]\OT1/cmr/m/n/10.95 For max depth iff to-tal time, see hand-writ-ten note max[
+]depth[]vs[]total[]time.pdf 
+ []
+
+[8] [9]
 No file riverside_notes.bbl.
-[8] (./riverside_notes.aux)
+[10] (./riverside_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -703,13 +714,13 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `riverside_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 307EFBFF9B4711789AD28413077C5DB2;1961.
+(rerunfilecheck)             Checksum: C9AA3BE6DD9BB71419EB696052A6E0F5;2349.
  ) 
 Here is how much of TeX's memory you used:
- 20726 strings out of 474116
- 380637 string characters out of 5743682
- 1945187 words of memory out of 5000000
- 42548 multiletter control sequences out of 15000+600000
+ 20741 strings out of 474116
+ 380919 string characters out of 5743682
+ 1943187 words of memory out of 5000000
+ 42558 multiletter control sequences out of 15000+600000
  568114 words of font info for 73 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  102i,9n,107p,604b,892s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -725,14 +736,16 @@ l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on riverside_notes.pdf (8 pages, 237408 bytes).
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on riverside_notes.pdf (10 pages, 268293 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
